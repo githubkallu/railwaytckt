@@ -1,0 +1,59 @@
+{% extends 'head.html' %}
+{% load static %}
+{% block body %}
+<style>
+.id2 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+   border-radius:10px;
+  border:1px solid #fff;
+
+}
+
+.id1 {
+  float: center;
+  border-right:1px solid #111;
+  font-size: larger;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 900;
+
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #bbb;
+   border-radius:10px;
+}
+
+.active {
+  background-color: #4CAF50;
+  border-radius:10px;
+}
+</style>
+
+<ul class="id2">
+  
+  <li class="id1"><a href="{% url 'login_customer' %}">Login</a></li>
+  <li class="id1"><a href="{% url 'register_customer' %}">Register</a></li>
+ 
+</ul>
+  {% block a %}
+  {% endblock %}
+
+
+
+{% endblock %}
